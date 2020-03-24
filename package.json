@@ -1,0 +1,37 @@
+{
+  "name": "damien-styles-and-inventory",
+  "version": "1.0.0",
+  "description": "Styles and Inventory module for Nike project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "build": "webpack --mode production",
+    "url": "git+https://github.com/rpt19-gunakadeit/damien-styles-and-inventory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpt19-gunakadeit/damien-styles-and-inventory/issues"
+  },
+  "homepage": "https://github.com/rpt19-gunakadeit/damien-styles-and-inventory#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.1",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
