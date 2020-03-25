@@ -81,7 +81,7 @@ var generateSeedScript = (min, max) => {
     var productURI = encodeURIComponent( product.toLowerCase().split( ' ' ).join( '-' ) );
     productList += `INSERT into products (name, nameURL) VALUES ("${product}", "${productURI}");\n`;
     var stylesForThisProduct = [],
-        numberOfStyles = rnd( max - min ) + min + 1,
+        numberOfStyles = rnd( max - min + 1 ) + min - 1,
         basePrice = rnd(price),
         type = rnd(types);
     for (var j = 0; j <= numberOfStyles; j++) {
