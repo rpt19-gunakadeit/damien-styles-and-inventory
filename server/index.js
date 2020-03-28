@@ -6,9 +6,11 @@ app.listen(port, () => console.log(`Nike app listening on port ${port}!`))
 
 // GET PRODUCT/STYLE INFO
 // Sample call: http://localhost:4000/api/products/88
+
 app.get('/api/products/:productId', ( req, res) => {
     res.send( sampleAPI);
 });
+
 
 // returns sample data 
 var sampleAPI = {
