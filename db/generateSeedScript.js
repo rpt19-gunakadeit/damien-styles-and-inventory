@@ -79,11 +79,11 @@ var generateSeedScript = (min, max) => {
 
   products.forEach( (product, id) => {
     var productURI = encodeURIComponent( product.toLowerCase().split( ' ' ).join( '-' ) );
-    productList += `INSERT into products (name, nameURL) VALUES ("${product}", "${productURI}");\n`;
+    var type = rnd(types);
+    productList += `INSERT into products (name, type, nameURL) VALUES ("${product}", "${type}", "${productURI}");\n`;
     var stylesForThisProduct = [],
         numberOfStyles = rnd( max - min + 1 ) + min - 1,
         basePrice = rnd(price),
-        type = rnd(types);
     for (var j = 0; j <= numberOfStyles; j++) {
       var randomstyle = rnd(styles);
       if ( !stylesForThisProduct.includes(randomstyle) ) { // skip duplicates
