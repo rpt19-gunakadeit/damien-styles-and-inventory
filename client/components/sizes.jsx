@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Inventory from './inventory.jsx';
 
-var Sizes = (props) => {
+var Sizes = ( {styleDetails} ) => {
 
   return (
     <div class="inventory">
-    {props.styleDetails.stock ? props.styleDetails.stock.map((stock, index) => {
+    {styleDetails.stock ? styleDetails.stock.map((stock, index) => {
         return <Inventory size={stock.size} count={stock.count} key={index}/>
     }): null}
   </div>

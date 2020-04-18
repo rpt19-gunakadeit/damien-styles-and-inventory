@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var Inventory = (props) => {
+var Inventory = ( {size, count} ) => {
 
   return (
-    <div class="size" title="{props.count}">
-      {props.size}
+    <div class="size" title="{count}">
+      {size}
     </div>
   )
 }
