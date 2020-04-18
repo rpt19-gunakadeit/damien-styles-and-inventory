@@ -10,16 +10,19 @@ app.get('/api/products/:productId', ( req, res) => {
     res.send( sampleAPI);
 });
 
+app.use(express.static('./client/dist'));
+
 // returns sample data 
 var sampleAPI = {
-    product_name: 'Nike Air VaporMax FlyKnit 3',
-    product_type: 'Women’s Shoe',
+    name: 'Nike Air VaporMax FlyKnit 3',
+    type: 'Women’s Shoe',
     styles: 
     [{
-      style_code: 'AS-7863-98', 
-      style_name: 'Phantom/Laser Fuchsia/Pink Rise/White',
-      retail_price: 200, 
-      sale_price: 186.97, 
+      id: 123,
+      code: 'AS-7863-98', 
+      name: 'Phantom/Laser Fuchsia/Pink Rise/White',
+      retail: 200, 
+      sale: 186.97, 
       stock:
       [{ size: '5', count: 3 },{ size: '5.5', count: 3 },
       { size: '6', count: 3 },{ size: '6.5', count: 3 },
